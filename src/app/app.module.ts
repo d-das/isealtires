@@ -26,6 +26,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     AppRoutingModule
   ],
+  exports: [
+    ApplicationCalculatorComponent,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
