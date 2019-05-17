@@ -1,0 +1,38 @@
+$color-gray: #314455;
+$color-violet: #644E5B;
+$color-red: #9E5A63;
+$color-light-red: #C96567;
+$color-blue: #97AABD;
+
+.slider {
+  height: 50vh;
+  min-height: 500px;
+	/*background-color: $color-light-red;
+	background-blend-mode: screen;*/
+}
+
+.slide1 {
+	background-image: url("../../assets/stock/truck_mtn.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.slide2 {
+	background-image: url("../../assets/stock/red-car.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.slide3 {
+	background-image: url("../../assets/stock/industrial.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+h1 {
+	font-family: 'Damion', cursive;
+	font-size: 2rem;
+}
