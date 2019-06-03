@@ -5,6 +5,7 @@ $color-violet: #644E5B;
 $color-red: #9E5A63;
 $color-light-red: #C96567;
 $color-blue: #97AABD;
+$color-light-blue: #c8dcf0;
 
 .navbar{
 	background-color: $color-blue;
@@ -20,11 +21,15 @@ $color-blue: #97AABD;
 }
 
 body{
-	background-color: white;
+	background-color: $color-blue;
 	margin-bottom: 60px;
 	font-family: 'Reem Kufi', sans-serif;
-
 }
+
+.col-md-10{
+	background-color: $color-light-blue;
+}
+
 
 .footer {
   position: absolute;
@@ -37,4 +42,12 @@ body{
 
 small{
 	font-size: .5rem;
+}
+
+a{
+	color: $color-light-red;
+}
+
+a:hover{
+	color: $color-violet;
 }
