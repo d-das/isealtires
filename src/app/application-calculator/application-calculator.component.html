@@ -1,3 +1,42 @@
-<p>
-  application-calculator works!
+<h4 class="text-center m-3">Sealant Application Calculator</h4>
+<p class="mx-4">
+  Below you can enter in the tire width and rim size (in inches) to receive an estimate for how much sealant you need. It is suggested to round up to 4 ounces
 </p>
+
+<div class="text-center">
+  <div class="">
+    <label for="inputTire">Tire Width : </label>
+    <input [(ngModel)]="width" keyboardType="number" id="inputTire" aria-describedby="tireHelp" placeholder="Enter tire size" #ctrl="ngModel" required>
+  </div>
+  <div class="">
+    <label for="inputRim">Rim Size : </label>
+    <input [(ngModel)]="rim" keyboardType="number" id="inputRim" aria-describedby="rimHelp" placeholder="Enter rim size" #ctrl="ngModel" required>
+  </div>
+  <div class="">
+    <input type="checkbox" class="form-check-input" id="offRoadCheck" (click)="setOffRoad()">
+    <label class="form-check-label" for="exampleCheck1">Off Road</label>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="calculate()">Calculate</button>
+  <p>
+    Fluid Oz: {{fluidOz}} <br>
+    Hand Pumps: {{handPumps}} <br>
+  </p>
+</div>
+
+<!-- <form>
+  <div class="form-group">
+    <label for="inputTire">Tire Width</label>
+    <input type="text" class="form-control" id="inputTire" aria-describedby="tireHelp" placeholder="Enter tire size">
+    <small id="tireHelp" class="form-text text-muted">In inches, ex: 2.8</small>
+  </div>
+  <div class="form-group">
+    <label for="inputRim">Tire Width</label>
+    <input type="text" class="form-control" id="inputRim" aria-describedby="rimHelp" placeholder="Enter rim size">
+    <small id="rimHelp" class="form-text text-muted">In inches, ex: 4</small>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="offRoadCheck">
+    <label class="form-check-label" for="exampleCheck1">Off Road</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>  -->
