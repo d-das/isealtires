@@ -14,8 +14,8 @@ export class ApplicationCalculatorComponent implements OnInit {
   @Input() public width:number = 0;
   @Input() public rim:number = 0;
   public fluidOz: number = 0;
-  public handPumps: number =0;
-  changeLog: string[] = [];
+  public handPumps: number = 0;
+  public purchaseOz: number = 0;
 
   constructor() {
     console.log("greetings from app calc constructor");
@@ -36,10 +36,12 @@ export class ApplicationCalculatorComponent implements OnInit {
     else{
       this.fluidOz =x;
     }
+    this.purchaseOz = Math.ceil(this.fluidOz/4)*4;
 
     this.handPumps = this.fluidOz/this.factorC;
 
     console.log("fluidOz:", this.fluidOz);
     console.log("handPumps:", this.handPumps);
+
   }
 }

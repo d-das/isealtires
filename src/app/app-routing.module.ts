@@ -6,6 +6,7 @@ import { HowToInstallComponent } from './how-to-install/how-to-install.component
 import { FaqComponent } from './faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: "howtoinstall", component: HowToInstallComponent },
   { path: "faq", component: FaqComponent },
   { path: "contact", component: ContactComponent },
+  { path: "calculator", component: CalculatorComponent},
   { path: "**", component: NotFoundComponent },
 ];
 

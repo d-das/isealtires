@@ -12,6 +12,8 @@ import { HowToInstallComponent } from './how-to-install/how-to-install.component
 import { ContactComponent } from './contact/contact.component';
 import { ApplicationCalculatorComponent } from './application-calculator/application-calculator.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { RestrictInputDirective } from './restrict-input.directive';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HowToInstallComponent,
     ContactComponent,
     ApplicationCalculatorComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    RestrictInputDirective,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
