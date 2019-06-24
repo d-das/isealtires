@@ -7,15 +7,32 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ApplicationCalculatorComponent implements OnInit {
 
+  //sealant factor
   private factorA:number = 0.1780327;
+  // offroad factor
   private factorB:number = 3;
+  // hand pump factor
   private factorC:number = 8;
-  @Input() public offRoad:boolean = false;
+  // inches factor
+  private factorD:number = 0.0393701;
   @Input() public width:number = 0;
   @Input() public rim:number = 0;
+  private sWidth:number = 0;
+  private sRim:number = 0;
   public fluidOz: number = 0;
   public handPumps: number = 0;
   public applicationOz: number = 0;
+  public measurements:Array<Object> = [
+    {val: false, name: "Standard"},
+    {val: true, name: "Metric"}
+  ]
+  public roads:Array<Object> = [
+    {val: false, name: "On Road"},
+    {val: true, name: "Off Road"}
+  ]
+  @Input() public selectedMeasure = this.measurements[0].val;
+  @Input() public selectedRoad = this.roads[0].val;
+
 
   constructor() {
     console.log("greetings from app calc constructor");
@@ -25,12 +42,19 @@ export class ApplicationCalculatorComponent implements OnInit {
   ngOnInit() {
   }
 
-  setOffRoad(){
-    this.offRoad = !this.offRoad;
-  }
   calculate(){
-    let x:number = (this.width*this.rim)*this.factorA;
-    if(this.offRoad){
+    console.log("selectedMeasure:", this.selectedMeasure);
+    console.log("selectedRoad:", this.selectedRoad);
+    if(this.selectedMeasure){
+      this.sWidth=this.width*this.factorD;
+      this.sRim=this.rim*this.factorD;
+    }
+    else{
+      this.sWidth = this.width;
+      this.sRim = this.rim
+    }
+    let x:number = (this.sWidth*this.sRim)*this.factorA;
+    if(this.selectedRoad){
       console.log("x:", x);
       this.fluidOz = x*this.factorB;
 
@@ -47,5 +71,11 @@ export class ApplicationCalculatorComponent implements OnInit {
     console.log("fluidOz:", this.fluidOz);
     console.log("handPumps:", this.handPumps);
 
+  }
+  setMetric(metric:boolean){
+    console.log("measurement set: ", metric);
+  }
+  setOffroad(road:boolean){
+    console.log("road set: ", road);
   }
 }
