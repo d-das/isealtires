@@ -22,11 +22,11 @@ export class ApplicationCalculatorComponent implements OnInit {
   public fluidOz: number = 0;
   public handPumps: number = 0;
   public applicationOz: number = 0;
-  public measurements:Array<Object> = [
+  public measurements:Array<any> = [
     {val: false, name: "Standard"},
     {val: true, name: "Metric"}
   ]
-  public roads:Array<Object> = [
+  public roads:Array<any> = [
     {val: false, name: "On Road"},
     {val: true, name: "Off Road"}
   ]
@@ -63,7 +63,7 @@ export class ApplicationCalculatorComponent implements OnInit {
       this.fluidOz =x;
     }
     this.applicationOz = Math.ceil(this.fluidOz/4)*4;
-    this.handPumps = this.fluidOz/this.factorC;
+    this.handPumps = this.applicationOz/this.factorC;
 
     //round out the floats
     this.fluidOz = parseFloat(this.fluidOz.toFixed(1));

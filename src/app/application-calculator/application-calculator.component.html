@@ -5,37 +5,7 @@
 <div class="container-fluid">
   <div class="row my-3">
     <div class="col-md"></div>
-    <div class="col-md-6 col-12 rounded">
-      <!-- <label for="exampleFormControlSelect1">System of Measurement:</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option (click)="setMetric(true)">Metric</option>
-        <option (click)="setMetric(false)">Standard</option>
-      </select>
-      <br>
-      <label for="exampleFormControlSelect1">Tire Use:</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>On Road</option>
-        <option>Off Road</option>
-      </select>
-      <br>
-      <div class="">
-        <label for="inputTire">Tire Width : </label>
-        <input [(ngModel)]="width" keyboardType="number" app-restrict-input="float" class="float-right" id="inputTire" aria-describedby="tireHelp" placeholder="Enter tire size" #ctrl="ngModel" required>
-      </div>
-      <div class="">
-        <label for="inputRim">Rim Size : </label>
-        <input [(ngModel)]="rim" keyboardType="number" app-restrict-input="float" class="float-right" id="inputRim" aria-describedby="rimHelp" placeholder="Enter rim size" #ctrl="ngModel" required>
-      </div>
-      <div class="">
-        <label class="form-check-label" for="exampleCheck1">Off Road:&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input class="" type="checkbox" id="offRoadCheck" (click)="setOffRoad()">
-      </div>
-      <br>
-      <div class="text-center">
-        <button type="submit" class="btn btn-primary" (click)="calculate()">Calculate</button>
-      </div>
-      <br> -->
-
+    <div class="col-md-10 col-12 rounded">
       <div class="input-group mb-2">
         <div class="input-group-prepend">
           <label class="input-group-text">System of Measurement:</label>
@@ -81,8 +51,8 @@
 
       <p>
         Claculated Fluid Oz: &nbsp;&nbsp;<b>{{fluidOz}}</b> <br>
-        Hand Pumps: &nbsp;&nbsp;<b>{{handPumps}}</b> <br>
         Suggested Application Amount in Oz: &nbsp;&nbsp;<b>{{applicationOz}}</b> <br>
+        Hand Pumps: &nbsp;&nbsp;<b>{{handPumps}}</b> <br>
       </p>
     </div>
     <div class="col-md" style="background-color:;"></div>
