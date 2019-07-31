@@ -3,12 +3,23 @@ $color-violet: #644E5B;
 $color-red: #9E5A63;
 $color-light-red: #C96567;
 $color-blue: #97AABD;
+$color-primary: #428bca;
+
+.top-fill{
+	z-index: 10;
+  height: 43vh;
+}
 
 .slider {
   height: 50vh;
   min-height: 500px;
 	/*background-color: $color-light-red;
 	background-blend-mode: screen;*/
+}
+
+.slide-content {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 15px;
 }
 
 .slide1 {
@@ -33,6 +44,6 @@ $color-blue: #97AABD;
 }
 
 h1 {
-	font-family: 'Damion', cursive;
+  font-family: 'Fugaz One', cursive;
 	font-size: 2rem;
 }

@@ -1,3 +1,35 @@
-<p>
-  how-to-install works!
-</p>
+<div class="container-fluid">
+  <div class="row my-3">
+    <div class="col-md"></div>
+    <div class="col-md-10 col-12 rounded p-5">
+      <button type="submit" class="btn" [ngClass]="(english==true)?'btn-primary':'btn-outline-primary'" (click)="setEnglish()">English</button>
+      <button type="submit" class="btn" [ngClass]="(english==true)?'btn-outline-primary':'btn-primary'" (click)="setSpanish()">Spanish</button>
+
+      <div *ngIf="english">
+        <h2 class="text-center">Directions</h2>
+        <ol>
+          <li>Refer to the Application Calculator to determine recommended fill amount for your tire/wheel.</li>
+          <li>Assure equipment is safely supported such that the weight of the equipment will not rest on the deflated tire.</li>
+          <li>Position valve stem between 10 and 2 o'clock, attach tube to bottle tip and remove valve core to deflated tire.</li>
+          <li>Install sealant and reinstall the valve core, <b style="color:red;">DO NOT install more than the recommended amount for high speed applications</b>.</li>
+          <li>Inflate tire to tire manufactures recommended pressure and reinstall valve stem cap.</li>
+          <li>Immediately rotate or move/drive equipment to seal any existing punctures, especially if any objects are removed after installing sealant.</li>
+        </ol>
+      </div>
+
+      <div *ngIf="!english">
+        <h2 class="text-center">Direcciones</h2>
+        <ol>
+          <li>Spanish!Refer to the Application Calculator to determine recommended fill amount for your tire/wheel.</li>
+          <li>Assure equipment is safely supported such that the weight of the equipment will not rest on the deflated tire.</li>
+          <li>Position valve stem between 10 and 2 o'clock, attach tube to bottle tip and remove valve core to deflated tire.</li>
+          <li>Install sealant and reinstall the valve core, <b style="color:red;">DO NOT install more than the recommended amount for high speed applications</b>.</li>
+          <li>Inflate tire to tire manufactures recommended pressure and reinstall valve stem cap.</li>
+          <li>Immediately rotate or move/drive equipment to seal any existing punctures, especially if any objects are removed after installing sealant.</li>
+        </ol>
+      </div>
+
+    </div>
+    <div class="col-md"></div>
+  </div>
+</div>

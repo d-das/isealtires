@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-how-to-install',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HowToInstallComponent implements OnInit {
 
+  public english:boolean = true;
+
+  setEnglish(){ this.english = true}
+  setSpanish(){ this.english = false}
+
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }
