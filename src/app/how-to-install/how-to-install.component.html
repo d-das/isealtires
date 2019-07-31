@@ -2,13 +2,13 @@
   <div class="row my-3">
     <div class="col-md"></div>
     <div class="col-md-10 col-12 rounded p-5">
-      <button type="submit" class="btn" [ngClass]="(english==true)?'btn-primary':'btn-outline-primary'" (click)="setEnglish()">English</button>
-      <button type="submit" class="btn" [ngClass]="(english==true)?'btn-outline-primary':'btn-primary'" (click)="setSpanish()">Spanish</button>
+      <button type="submit" class="btn" [ngClass]="(english==true)?'btn-primary':'btn-outline-primary'" (click)="setEnglish()">English</button>&nbsp;&nbsp;
+      <button type="submit" class="btn" [ngClass]="(english==true)?'btn-outline-primary':'btn-primary'" (click)="setSpanish()">Español</button>
 
       <div *ngIf="english">
         <h2 class="text-center">Directions</h2>
         <ol>
-          <li>Refer to the Application Calculator to determine recommended fill amount for your tire/wheel.</li>
+          <li>Refer to the <a href="calculator">Application Calculator</a> to determine recommended fill amount for your tire/wheel.</li>
           <li>Assure equipment is safely supported such that the weight of the equipment will not rest on the deflated tire.</li>
           <li>Position valve stem between 10 and 2 o'clock, attach tube to bottle tip and remove valve core to deflated tire.</li>
           <li>Install sealant and reinstall the valve core, <b style="color:red;">DO NOT install more than the recommended amount for high speed applications</b>.</li>
@@ -20,12 +20,12 @@
       <div *ngIf="!english">
         <h2 class="text-center">Direcciones</h2>
         <ol>
-          <li>Spanish!Refer to the Application Calculator to determine recommended fill amount for your tire/wheel.</li>
-          <li>Assure equipment is safely supported such that the weight of the equipment will not rest on the deflated tire.</li>
-          <li>Position valve stem between 10 and 2 o'clock, attach tube to bottle tip and remove valve core to deflated tire.</li>
-          <li>Install sealant and reinstall the valve core, <b style="color:red;">DO NOT install more than the recommended amount for high speed applications</b>.</li>
-          <li>Inflate tire to tire manufactures recommended pressure and reinstall valve stem cap.</li>
-          <li>Immediately rotate or move/drive equipment to seal any existing punctures, especially if any objects are removed after installing sealant.</li>
+          <li>Consulte <a href="calculator">la Calculadora de Aplicación</a> para determinar la cantidad de llenado recomendada para su neumático / reuda.</li>
+          <li>Asegurar que el equipo esté soportado con seguridad de tal manera que el peso del equipo no se apoye en el neumático defectuoso.</li>
+          <li>Coloque el vástago de la válvula entre las 10 y las 2 horas, fije el tubo a la punta de la botella y retire el núcleo de la válvula para desinfectar el neumático.</li>
+          <li>Instale el sellador y reinstale el núcleo de la válvula. <b style="color:red;">NO instale más de la cantidad recomendada para aplicaciones de alta velocidad</b>.</li>
+          <li>Inflame neumático para neumáticos fabrica la presión recomendada y vuelva a instalar la tapa del vástago de la válvula.</li>
+          <li>Gire o mueva inmediatamente el equipo para sellar las perforaciones existentes, especialmente si se retiran los objetos después de instalar el sellador.</li>
         </ol>
       </div>
 
