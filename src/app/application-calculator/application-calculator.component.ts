@@ -15,8 +15,8 @@ export class ApplicationCalculatorComponent implements OnInit {
   private factorC:number = 8;
   // inches factor
   private factorD:number = 0.0393701;
-  @Input() public width:number = 0;
-  @Input() public rim:number = 0;
+  @Input() public width:number = null;
+  @Input() public rim:number = null;
   private sWidth:number = 0;
   private sRim:number = 0;
   public fluidOz: number = 0;
@@ -27,16 +27,15 @@ export class ApplicationCalculatorComponent implements OnInit {
     {val: true, name: "Metric"}
   ]
   public roads:Array<any> = [
-    {val: false, name: "On Road"},
-    {val: true, name: "Off Road"}
+    {val: true, name: "Off Road"},
+    {val: false, name: "On Road"}
   ]
   @Input() public selectedMeasure = this.measurements[0].val;
   @Input() public selectedRoad = this.roads[0].val;
 
 
   constructor() {
-    console.log("greetings from app calc constructor");
-
+    // console.log("greetings from app calc constructor");
   }
 
   ngOnInit() {
@@ -62,7 +61,7 @@ export class ApplicationCalculatorComponent implements OnInit {
     else{
       this.fluidOz =x;
     }
-    this.applicationOz = Math.ceil(this.fluidOz/4)*4;
+    this.applicationOz = (this.fluidOz % 4) >= 2 ? Math.floor(this.fluidOz / 4) * 4 + 4 : Math.floor(this.fluidOz / 4) * 4;
     this.handPumps = this.applicationOz/this.factorC;
 
     //round out the floats
@@ -70,12 +69,17 @@ export class ApplicationCalculatorComponent implements OnInit {
     this.handPumps = parseFloat(this.handPumps.toFixed(1));
     console.log("fluidOz:", this.fluidOz);
     console.log("handPumps:", this.handPumps);
+  }
 
+  wipeInput(){
+    this.width = null;
+    this.rim = null;
   }
-  setMetric(metric:boolean){
-    console.log("measurement set: ", metric);
-  }
-  setOffroad(road:boolean){
-    console.log("road set: ", road);
-  }
+
+  // setMetric(metric:boolean){
+  //   console.log("measurement set: ", metric);
+  // }
+  // setOffroad(road:boolean){
+  //   console.log("road set: ", road);
+  // }
 }
