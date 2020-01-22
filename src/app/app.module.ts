@@ -15,6 +15,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RestrictInputDirective } from './restrict-input.directive';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { WelcomeMatComponent } from './welcome-mat/welcome-mat.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatCardModule} from '@angular/material/card';
+
+
 
 @NgModule({
   declarations: [
@@ -33,7 +38,9 @@ import { WelcomeMatComponent } from './welcome-mat/welcome-mat.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   exports: [
     ApplicationCalculatorComponent,
