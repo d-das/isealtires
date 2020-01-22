@@ -3,7 +3,8 @@ $color-violet: #644E5B;
 $color-red: #9E5A63;
 $color-light-red: #C96567;
 $color-blue: #97AABD;
-$color-primary: #428bca;
+$color-primary: #0abedf;
+//#0abedf
 
 .top-fill{
 	z-index: 10;
@@ -20,6 +21,81 @@ $color-primary: #428bca;
 .slide-content {
   background-color: rgba(0,0,0,0.5);
   border-radius: 15px;
+}
+
+.nav-comp {
+	position: relative;
+	top: -120px;
+	z-index: 1;
+}
+
+.overlap-1 {
+	position: relative;
+	top: -170px;
+	z-index: 5;
+}
+
+.overlap-2 {
+	position: relative;
+	top: -270px;
+	z-index: 5;
+}
+
+.overlap-3 {
+	position: relative;
+	top: -370px;
+	z-index: 5;
+}
+
+.overlay {
+	background:rgba(0,0,0,0.0);
+	justify-content: center;
+}
+
+.banner-1 {
+	position: relative;
+	height: 50vh;
+	width: 100%;
+	bottom: 0px;
+	z-index: 1;
+	min-height: 500px;
+	background-image: url("../../assets/stock/farm.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.banner-2 {
+	height: 50vh;
+	width: 100%;
+	bottom: 0px;
+	z-index: 1;
+	min-height: 500px;
+	background-image: url("../../assets/stock/fourwheel.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform: translateY(-100px);
+}
+
+.banner-3 {
+	height: 50vh;
+	width: 100%;
+	bottom: 0px;
+	z-index: 1;
+	min-height: 500px;
+	background-image: url("../../assets/stock/golfcarts.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform: translateY(-200px);
+}
+
+.center-div {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
 }
 
 .slide1 {
@@ -41,9 +117,4 @@ $color-primary: #428bca;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-}
-
-h1 {
-  font-family: 'Fugaz One', cursive;
-	font-size: 2rem;
 }

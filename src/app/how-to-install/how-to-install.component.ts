@@ -12,7 +12,9 @@ export class HowToInstallComponent implements OnInit {
   setEnglish(){ this.english = true}
   setSpanish(){ this.english = false}
 
-  constructor() { }
+  constructor() {
+    console.log("how to install");
+  }
 
   ngOnInit() {
   }

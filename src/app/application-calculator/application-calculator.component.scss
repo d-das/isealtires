@@ -2,3 +2,17 @@ h1, h4 {
 	font-family: 'Fugaz One', cursive;
 	font-size: 2rem;
 }
+
+.banner_holder{
+  width: inherit;
+	background-color: #7eafff;
+}
+
+.banner {
+	z-index: 1;
+	height: 100%;
+	min-height: 250px;
+	background-image: url("../../assets/calc_banner.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+}

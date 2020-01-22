@@ -14,6 +14,7 @@ import { ApplicationCalculatorComponent } from './application-calculator/applica
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RestrictInputDirective } from './restrict-input.directive';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { WelcomeMatComponent } from './welcome-mat/welcome-mat.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
     ApplicationCalculatorComponent,
     NotFoundComponent,
     RestrictInputDirective,
-    CalculatorComponent
+    CalculatorComponent,
+    WelcomeMatComponent
   ],
   imports: [
     BrowserModule,

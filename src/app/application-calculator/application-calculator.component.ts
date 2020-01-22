@@ -35,7 +35,7 @@ export class ApplicationCalculatorComponent implements OnInit {
 
 
   constructor() {
-    // console.log("greetings from app calc constructor");
+    console.log("greetings from app calc constructor");
   }
 
   ngOnInit() {
