@@ -46,7 +46,7 @@ export class ApplicationCalculatorComponent implements OnInit {
     console.log("selectedRoad:", this.selectedRoad);
     if(this.selectedMeasure){
       this.sWidth=this.width*this.factorD;
-      this.sRim=this.rim*this.factorD;
+      this.sRim=this.rim;
     }
     else{
       this.sWidth = this.width;
