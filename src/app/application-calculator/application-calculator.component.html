@@ -10,7 +10,7 @@
         <div class="input-group-prepend">
           <label class="input-group-text">System of Measurement:</label>
         </div>
-        <select class="custom-select" id="measurementSelect" [(ngModel)]="selectedMeasure">
+        <select class="custom-select" id="measurementSelect" [(ngModel)]="selectedMeasure" (click)="wipeInput()">
           <option *ngFor="let m of measurements" [ngValue]="m.val">{{m.name}}</option>
         </select>
       </div>
@@ -37,12 +37,11 @@
 
       <div class="input-group mb-2">
         <div class="input-group-prepend">
-          <span class="input-group-text">Rim/Wheel Size:</span>
+          <span class="input-group-text">Wheel Diameter/Size</span>
         </div>
         <textarea class="form-control" id="rimInput" rows="1" [(ngModel)]="rim" keyboardType="number" app-restrict-input="float" id="inputTire" placeholder="Enter rim/wheel size" #ctrl="ngModel" required>Tire Width:</textarea>
         <div class="input-group-append">
-          <span *ngIf="!selectedMeasure" class="input-group-text">inches</span>
-          <span *ngIf="selectedMeasure" class="input-group-text">mm</span>
+          <span class="input-group-text">inches</span>
         </div>
       </div>
 
